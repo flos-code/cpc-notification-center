@@ -1,0 +1,40 @@
+body {
+  font-family: sans-serif;
+  background-image: linear-gradient(
+    40deg,
+    hsl(240deg 62% 88%) 0%,
+    hsl(259deg 100% 83%) 39%,
+    hsl(282deg 100% 74%) 61%,
+    hsl(299deg 100% 50%) 100%
+  );
+}
+
+.notification-center {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 300px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  > button {
+    width: 100%;
+    border: 0;
+    font: inherit;
+    background: none;
+    padding: 0.5rem 1rem;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.notification {
+  padding: 0.5rem;
+  border-bottom: 1px dotted #e0e0e0;
+}
+
+.notification:last-child {
+  border-bottom: none;
+}
