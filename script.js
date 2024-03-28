@@ -1,11 +1,14 @@
-const button = document.querySelector(".notification-center > button");
-const notifications = document.querySelector(".notifications");
+let notificationsVisible = false;
 
-button.addEventListener("click", function () {
-    if (button.getAttribute("aria-expanded") === "true") {
-        button.setAttribute("aria-expanded", "false");
+function toggleNotifications() {
+    if (notificationsVisible) {
+        notificationsVisible = !notificationsVisible;
+        document.getElementById('heading').classList.add('opacity_0')
+        document.getElementById('bell').style.width = '64px';
     } else {
-        button.setAttribute("aria-expanded", "true");
+        notificationsVisible = !notificationsVisible;
+        document.getElementById('heading').classList.remove('opacity_0')
+        document.getElementById('bell').style.width = '320px';
     }
-    notifications.classList.toggle("hidden");
-});
+
+}

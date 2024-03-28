@@ -1,0 +1,133 @@
+body {
+  font-family: sans-serif;
+  background-image: linear-gradient(40deg, hsl(240, 62%, 88%) 0%, hsl(259, 100%, 83%) 39%, hsl(282, 100%, 74%) 61%, hsl(299, 100%, 50%) 100%);
+}
+
+.d-none {
+  display: none;
+}
+
+.opacity_0 {
+  opacity: 0;
+}
+
+#bell {
+  background-color: aqua;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  width: 64px;
+  transition: width 400ms ease-in-out;
+  border-radius: 36px;
+  box-sizing: border-box;
+}
+#bell #heading {
+  position: absolute;
+  left: 0;
+  font-size: 48px;
+  transition: opacity 150ms ease-in-out;
+}
+#bell .bellIcon {
+  transform-origin: top center;
+}
+#bell .bellIcon:hover {
+  animation: ringBell 1000ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+#bell .material-symbols-outlined {
+  font-size: 64px;
+}
+#bell .count {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  bottom: 6px;
+  right: 6px;
+  border: 2px solid aqua;
+}
+#bell .bellHover {
+  display: none;
+}
+#bell .bellDefault {
+  display: block;
+}
+#bell:hover {
+  cursor: pointer;
+}
+#bell:hover .bellHover {
+  display: block;
+}
+#bell:hover .bellDefault {
+  display: none;
+}
+
+@keyframes ringBell {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(20deg);
+  }
+  20% {
+    transform: rotate(-20deg);
+  }
+  30% {
+    transform: rotate(15deg);
+  }
+  40% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(-10deg);
+  }
+  70% {
+    transform: rotate(5deg);
+  }
+  80% {
+    transform: rotate(-5deg);
+  }
+  90% {
+    transform: rotate(2.5deg);
+  }
+  95% {
+    transform: rotate(-2.5deg);
+  }
+}
+.notification-center {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 300px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.notification-center > button {
+  width: 100%;
+  border: 0;
+  font: inherit;
+  background: none;
+  padding: 0.5rem 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.notification {
+  padding: 0.5rem;
+  border-bottom: 1px dotted #e0e0e0;
+}
+
+.notification:last-child {
+  border-bottom: none;
+}/*# sourceMappingURL=style.css.map */

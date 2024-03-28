@@ -4,12 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styel.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="notification-center">
+    <div id="bell" onclick="toggleNotifications()">
+      <div id="heading" class="opacity_0">Notifications</div>
+      <div class="bellIcon">
+        <span class="material-symbols-outlined bellDefault">
+          notifications
+        </span>
+        <span class="material-symbols-outlined bellHover">
+          notifications_active
+        </span>
+        <div class="count">3</div>
+      </div>
+    </div>
+
+    <!-- <div class="notification-center">
       <button>Notifications</button>
+
       <div class="notifications hidden">
         <div class="notification">
           <p>👍 Abdul liked your post</p>
@@ -24,6 +42,6 @@
           <p>🎥 Oscar is going live!</p>
         </div>
       </div>
-    </div>
+    </div> -->
   </body>
 </html>
